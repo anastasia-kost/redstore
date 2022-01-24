@@ -15,3 +15,13 @@ function menuToggle() {
 menuIcon.addEventListener("click", () => {
   menuToggle();
 });
+
+// product gallery
+const productImg = document.getElementById("product-img");
+const smallImgs = document.getElementsByClassName("small-img");
+
+for (const smallImage of smallImgs) {
+  smallImage.onclick = () => {
+    productImg.src = smallImage.src;
+  };
+}
